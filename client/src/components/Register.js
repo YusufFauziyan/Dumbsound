@@ -25,10 +25,11 @@ export default function Register () {
         password: "",
         fullName: "",
         phone: "",
-        address: ""
+        address: "",
+        gender: ""
     })
 
-    const { fullName, email, password, phone, address } = form;
+    const { fullName, email, password, phone, address, gender } = form;
 
     const handleChange = (e) => {
       setForm({
@@ -78,7 +79,8 @@ export default function Register () {
                 password: "",
                 fullName: "",
                 phone: "",
-                address: ""
+                address: "",
+                gender: ""
             });
             setMessage(alert);
             setTimeout(() => navigate("/"), 2000)
@@ -138,10 +140,10 @@ export default function Register () {
                 />
                 </div>
                 <div className="mb-3">
-                <select class="form-select bg-grey text-grey1" aria-label="Default select example">
-                    <option selected hidden>Gender</option>
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
+                <select class="form-select bg-grey text-grey1" type="text" value={gender} name="gender" onChange={handleChange}>
+                    <option selected hidden value="">Gender</option>
+                    <option name="gender">Male</option>
+                    <option name="gender">Female</option>
                 </select>
                 </div>
                 <div className="mb-3">

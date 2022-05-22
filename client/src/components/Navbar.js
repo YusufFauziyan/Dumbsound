@@ -40,7 +40,7 @@ export default function Navbar () {
         <>
             <nav class="navbar mx-5">
                 <div class="container-fluid mt-3">
-                    <a href='' className='text-decoration-none d-flex align-items-center'>
+                    <a href='#' className='text-decoration-none d-flex align-items-center'>
                         <img src={Logo} alt="logo" />
                         <p className='text-orange my-auto fw-bold ms-2'>DUMB<span className='text-white'>SOUND</span></p> 
                     </a>

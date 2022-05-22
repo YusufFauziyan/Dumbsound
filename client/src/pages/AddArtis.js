@@ -91,7 +91,7 @@ export default function AddArtis () {
 
                         <input type="number" className="p-2 bg-grey my-3 border-none borra-2" placeholder='Old' value={old} name='old' onChange={handleChange} />
 
-                        <select class="form-select bg-grey text-grey1" aria-label="Default select example" type="text" onChange={handleChange} value={type} name="type" required>
+                        <select class="form-select bg-grey text-grey1" type="text" onChange={handleChange} value={type} name="type" required>
                             <option selected hidden>Type</option>
                             <option name="type">Solo</option>
                             <option name="type">Band</option>

@@ -1,16 +1,21 @@
 // import components
-import * as React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React, {useContext} from 'react'
+import { Link } from 'react-router-dom'
 import { Dropdown} from 'react-bootstrap'
+import Avatar from 'react-avatar';
 
 import DropUser from './DropUser'
+import { UserContext } from '../../context/userContext';
+import { API } from '../../config/api'
 
 // image
 import Logo from '../../assets/DumbSound.png'
-import Joji from '../../assets/Joji.jpg'
 
 
 export default function NavbarUser() {
+
+    const [state, dispatch] = useContext(UserContext)
+
 
     return(
         <>
@@ -24,7 +29,14 @@ export default function NavbarUser() {
 
                         <Dropdown>
                             <Dropdown.Toggle variant="transparent">
-                                <img src={Joji} alt="user" width={45} className='rounded-circle me-5 shadow' />
+                                <Avatar 
+                                    colors={['red', 'orange', 'green']}
+                                    name={state.user.fullName}
+                                    size="45"
+                                    textSizeRatio={2.5}
+                                    round={true}
+                                    className="shadow me-5"
+                                />
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu variant="dark">

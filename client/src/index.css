@@ -128,6 +128,9 @@ body {
 .p-10 {
     padding: 0 20%;
 }
+.mb-6 {
+    margin-bottom: 60px;
+}
 
 /* Start */
 /* login */

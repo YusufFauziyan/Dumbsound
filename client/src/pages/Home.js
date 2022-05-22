@@ -66,7 +66,7 @@ export default function Home () {
 
                 <h3 className='text-orange text-center mt-5'>Dengarkan Dan Rasakan</h3>
 
-                <div className="mx-5 borra-4 d-flex gap-4 justify-content-justify flex-1 flex-wrap">
+                <div className="mx-5 borra-4 d-flex gap-4 justify-content-justify flex-1 flex-wrap mb-6">
                     {/* card */}
                     {userTrans === null || userTrans?.status === "pending" ?
                         <>
@@ -121,9 +121,8 @@ export default function Home () {
                         </>
                     }
 
-                    
-    
                 </div>
+            <br/>
             </div>
             {/* Playing Music Player */}
             {playMusic === "" ?

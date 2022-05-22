@@ -70,7 +70,7 @@ export default function AddMusic () {
                     Authorization: "Basic " + localStorage.token,
                 },
                 body: formData
-              };
+            };
             
             // Insert product data
             const response = await api.post('/music', config)

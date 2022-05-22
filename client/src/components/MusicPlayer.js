@@ -1,6 +1,4 @@
 import * as React from 'react';
-import Joji from '../assets/Joji.jpg'
-import MusicJoji from '../assets/Joji - Sanctuary.mp3'
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 

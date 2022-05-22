@@ -19,6 +19,7 @@ exports.register = async (req, res) => {
             fullName: joi.string().min(3),
             phone: joi.number().min(11),
             address: joi.string().min(10),
+            gender: joi.string().min(3),
         })
 
         // get error validation
@@ -64,7 +65,7 @@ exports.register = async (req, res) => {
             status: "success",
             data: {
                 id: newUser.id,
-                name: newUser.fullName,
+                fullName: newUser.fullName,
                 email: newUser.email,
                 token,
             }
@@ -134,6 +135,7 @@ exports.login = async (req, res) => {
                     id: userExist.id,
                     email: userExist.email,
                     status: userExist.status,
+                    fullName: userExist.fullName,
                     token,
                 }
             },

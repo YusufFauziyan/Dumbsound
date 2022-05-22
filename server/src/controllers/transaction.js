@@ -1,3 +1,6 @@
+// midtransClient
+const midtransClient = require("midtrans-client");
+
 // import models
 const {
     transaction,
@@ -8,16 +11,38 @@ const {
 exports.addTransaction = async (req, res) => {
     try {
         const data = req.body
-        console.log(data);
-        console.log(req.user);
 
-        // const userData = await user.fin
-
-        const userTx = await transaction.create({
+        data = {
+            id: parseInt(data.transaction + Math.random().toString().slice(3, 8)),
             ...data,
             userId: req.user.id,
-            status: "pending"
-        })
+            status: "pending",
+        };
+
+          // Insert data to transaction table
+        const newData = await transaction.create(data);
+
+        const userData = await user.findOne({
+            where: {
+              id: newData.userId,
+            },
+            attributes: {
+              exclude: ["createdAt", "updatedAt", "password"],
+            },
+        });
+
+         // Create Snap API instance
+        let snap = new midtransClient.Snap({
+            // Set to true for  Production Environment (accept real transaction).
+            isProduction: false,
+            serverKey: process.env.MIDTRANS_SERVER_KEY,
+        });
+
+        // const userTx = await transaction.create({
+        //     ...data,
+        //     userId: req.user.id,
+        //     status: "pending"
+        // })
 
         res.status(200).send({
             status: "success",
@@ -96,3 +121,4 @@ exports.getTransaction = async (req, res) => {{
         })
     }
 }}
+

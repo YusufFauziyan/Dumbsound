@@ -1,18 +1,32 @@
-import * as React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+
+import Duration from '../components/TimeDuration'
 import NavbarAdmin from '../components/admin/NavbarAdmin'
 import { API } from '../config/api'
+import { UserContext } from '../context/userContext'
 
 export default function AdminPage () {
+
     let api = API()
+    
+    const [state, dispatch] = useContext(UserContext)
+    const [users, setUsers] = useState()
 
-    const checkUser = async() => {
-        const response = await api.get('/users')
-        console.log(response);
+    const getUsers = async () => {
+        const config = {
+            method: 'GET',
+            headers: {
+                Authorization: "Basic " + localStorage.token,
+            } 
+        };
+        const response = await api.get('/users', config)
+        setUsers(response.getData)
     }
-
-    React.useEffect(() => {
-        checkUser()
-    },[])
+    console.log(users);
+    useEffect(() => {
+        getUsers()
+    }, [])
+    
 
     return(
         <>
@@ -31,13 +45,24 @@ export default function AdminPage () {
                             </tr>
                         </thead>
                         <tbody>
+                        {users?.map((user, index) => (
                             <tr>
-                                <th scope="row" className='p-3'>1</th>
-                                <td className='p-3'>Yusuf Gituloh</td>
-                                <td className='p-3 text-green'>Unlimited</td>
-                                <td className='p-3 text-red'>Not Active</td>
-                                <td className='p-3 text-yellow'>Pending</td>
+                                <th scope="row" className='p-3'>{index + 1}</th>
+                                <td className='p-3'>{user.fullName}</td>
+                                <td className='p-3 text-green'> PR
+                                </td>
+                                {user.transaction?.status === "success" ?
+                                    <td className='p-3 text-green'>Active</td> : 
+                                    <td className='p-3 text-red'>unActvie</td>
+                                }
+                                {user.transaction?.status === "success" ?
+                                    <td className='p-3 text-green'>{user.transaction.status}</td> : 
+                                user.transaction?.status === "pending" ?
+                                    <td className='p-3 text-yellow'>{user.transaction.status}</td> :
+                                    <td className='p-3 text-white'>-</td>
+                                }
                             </tr>
+                        ))}
                         </tbody>
                     </table>
                 </div>
