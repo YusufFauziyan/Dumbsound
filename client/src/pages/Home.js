@@ -32,7 +32,6 @@ export default function Home () {
     useEffect(() => {
         getMusic()
     }, [])
-
     // find transaction
     const getTransaction = async () => {
         try {
@@ -43,7 +42,7 @@ export default function Home () {
                 },
               };
             const response = await api.get(`/user/${state.user.id}`, config)
-            setUserTrans(response.dataUser.transaction)
+            setUserTrans(response.dataUser?.transaction)
         } catch (error) {
             console.log(error);
         }
@@ -87,7 +86,7 @@ export default function Home () {
                                         </Link>
                                     )
                                 })
-                                :
+                                : 
                                 <h2 className='text-center text-white mx-auto mt-5'>Sorry.. <br/>No Music Found please contact Admin</h2>
                             }
                         </>

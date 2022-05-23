@@ -12,42 +12,17 @@ exports.addTransaction = async (req, res) => {
     try {
         const data = req.body
 
-        data = {
-            id: parseInt(data.transaction + Math.random().toString().slice(3, 8)),
+        const newData = await transaction.create({
             ...data,
-            userId: req.user.id,
             status: "pending",
-        };
-
-          // Insert data to transaction table
-        const newData = await transaction.create(data);
-
-        const userData = await user.findOne({
-            where: {
-              id: newData.userId,
-            },
-            attributes: {
-              exclude: ["createdAt", "updatedAt", "password"],
-            },
+            price: "30000",
+            userId: req.user.id
         });
-
-         // Create Snap API instance
-        let snap = new midtransClient.Snap({
-            // Set to true for  Production Environment (accept real transaction).
-            isProduction: false,
-            serverKey: process.env.MIDTRANS_SERVER_KEY,
-        });
-
-        // const userTx = await transaction.create({
-        //     ...data,
-        //     userId: req.user.id,
-        //     status: "pending"
-        // })
-
+        
         res.status(200).send({
-            status: "success",
-            message: "add transaction successfully",
-            userTx
+            status: "pending",
+            message: "Pending transaction payment gateway",
+            newData
         })
 
     } catch (error) {

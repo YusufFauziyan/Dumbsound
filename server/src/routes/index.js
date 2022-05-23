@@ -43,7 +43,7 @@ router.get('/users', getUsers)
 router.get('/user/:id', getUser)
 
 // Transaction
-router.post('/transaction', auth, addTransaction)
+router.post('/transaction',auth, addTransaction)
 router.get('/transactions', getTransactions)
 router.get('/transaction/:id', getTransaction)
 
