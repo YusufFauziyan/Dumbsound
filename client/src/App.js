@@ -7,6 +7,7 @@ import { API } from "./config/api";
 
 // import pages
 import Transaction from './pages/Transaction'
+import PendingTransaction from './pages/PendingTransaction'
 import AdminPage from './pages/AdminPage'
 import AddMusic from './pages/AddMusic'
 import AddArtis from './pages/AddArtis'
@@ -76,6 +77,7 @@ const App = () => {
       <Route exact path='/auth' element={<Auth />} />
       <Route exact path='/' element={<Home />} />
       <Route exact path='/pay' element={<Transaction />} />
+      <Route exact path='/pending' element={<PendingTransaction />} />
       <Route exact path='/admin' element={<AdminPage />} />
       <Route exact path='/add-music' element={<AddMusic />} />
       <Route exact path='/add-artis' element={<AddArtis />} />

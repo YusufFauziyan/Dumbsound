@@ -29,6 +29,7 @@ const {
     addTransaction,
     getTransactions,
     getTransaction,
+    notification
 } = require ('../controllers/transaction')
 
 const {
@@ -46,6 +47,8 @@ router.get('/user/:id', getUser)
 router.post('/transaction',auth, addTransaction)
 router.get('/transactions', getTransactions)
 router.get('/transaction/:id', getTransaction)
+
+router.post('/notification', notification)
 
 // Artis
 router.post('/artis', addArtis)
