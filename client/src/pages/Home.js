@@ -1,12 +1,13 @@
 import { useEffect, useState, useContext } from "react";
 import { Link } from 'react-router-dom'
-import { Navbar } from 'react-bootstrap'
+import { Navbar, Dropdown } from 'react-bootstrap'
 
 // component
 import NavbarUser from '../components/user/NavbarUser'
 import MusicPlayer from '../components/MusicPlayer'
 import { API } from '../config/api'
 import { UserContext } from "../context/userContext";
+import ChatUser from '../components/user/ChatUser'
 
 
 const path = "http://localhost:5000/uploads/"
@@ -116,17 +117,28 @@ export default function Home () {
                                 }
                             </>
                             }
-                            
                         </>
                     }
+                </div>
+                
+                <div className="w-100 p-fixed z-index10">
+                    {/* Chat User */}
+                    <Dropdown width="100" className="position-relative z-index10">
+                        <Dropdown.Toggle variant="transparent">
+                        <i class='bx bxs-message-alt-dots text-orange fs-1 '></i>
+                        </Dropdown.Toggle>
 
+                        <Dropdown.Menu id="chat">
+                            <ChatUser />
+                        </Dropdown.Menu>
+                    </Dropdown>
                 </div>
             <br/>
             </div>
             {/* Playing Music Player */}
             {playMusic === "" ?
                 <div /> :
-                <Navbar className="fixed-bottom">
+                <Navbar className="fixed-bottom z-index1">
                     <MusicPlayer playMusic={playMusic} />
                 </Navbar>
             }

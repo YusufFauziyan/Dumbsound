@@ -25,6 +25,7 @@ export default function NavbarAdmin() {
                         <p className='text-orange my-auto fw-bold ms-2'>DUMB<span className='text-white'>SOUND</span></p> 
                     </Link>
                     <div className="">
+                    <Link to='/chat-admin' class='bx bx-message-rounded-detail text-white fs-1 position-absolute chat-icon text-decoration-none'></Link>
                     <Dropdown>
                             <Dropdown.Toggle variant="transparent">
                             <Avatar 

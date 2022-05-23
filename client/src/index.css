@@ -78,6 +78,9 @@ body {
 .fw-small {
     font-weight: lighter !important;
 }
+.font-pt {
+    font-family: 'PT Sans', sans-serif !important;
+}
 
 /* font-size */
 .fs-7 {
@@ -107,29 +110,58 @@ body {
     border-bottom: 2px solid #A8A8A8 !important;
 }
 .border-none {
-    border: none;
+    border: none !important;
+}
+.borra-form {
+    border-radius: 0px 0px 5px 5px !important;
 }
 
 /* flex */
 .flex-1 {
     flex: 1;
 }
+.flex-2 {
+    flex: 2;
+}
+.flex-3 {
+    flex: 3;
+}
+.flex-4 {
+    flex: 4;
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }
 
 .height-30 {
-    height: 50vh;
+    height: 50vh !important;
 }
+
 
 .height-90 {
     height: 90vh;
 }
+.mb-6 {
+    margin-bottom: 60px;
+}
+.m-x {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
 .p-10 {
     padding: 0 20%;
 }
-.mb-6 {
-    margin-bottom: 60px;
+.p-x {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.px-15 {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+}
+.h-80 {
+    height: 80vh;
 }
 
 /* Start */
@@ -149,6 +181,12 @@ body {
 }
 .w-45 {
     width: 45px !important;
+}
+.h-1 {
+    height: 35vh;
+}
+.h-70 {
+    height: 75vh !important;
 }
 
 /* dropdown user */
@@ -201,7 +239,7 @@ body {
 
 /* music player */
 .navplay {
-    background-color: #2E2D2D;
+    background-color: rgba(46, 45, 45, .8);
     height: 80px;
 }
 .rhap_container {
@@ -321,4 +359,97 @@ input[type='file'] {
 }
 .object-fit {
     object-fit: cover !important;
+}
+
+/* Chat User */
+.chat-container {
+    width: 35%;
+    background-color: #2B2B2B;
+    border-radius: 8px;
+    
+}
+.overflow-auto {
+    overflow: auto !important;
+}
+.bxs-message-alt-dots {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+#chat .chat-container {
+    width:max-content !important;
+    position: fixed !important;
+    bottom: 0;
+    margin-bottom: 80px;
+    margin-left:50px !important;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888; 
+border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+/* Chat admin */
+.container-chat-admin {
+    display: flex;
+    flex-wrap: wrap;
+}
+.triangle-left {
+	width: 0;
+	height: 0;
+	border-top: 13px solid transparent;
+	border-right: 22px solid #0D6EFD;
+	border-bottom: 13px solid transparent;
+    margin-top: 8px;
+}
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 13px solid transparent;
+	border-left: 22px solid #0D6EFD;
+	border-bottom: 10px solid transparent;
+    margin-top: 10px;
+}
+.overflow-y {
+    overflow-x: auto !important;
+}
+.position-relative {
+    position: relative !important;
+}
+.p-fixed {
+    position: fixed;
+}
+.position-absolute {
+    position: absolute !important;
+}
+
+.chat-icon {
+    cursor: pointer;
+    right: 200px;
+    bottom: 16px;
+}
+
+.z-index1 {
+    z-index: 1 !important;
+}
+.z-index10 {
+    z-index: 10 !important;
 }

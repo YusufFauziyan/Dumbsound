@@ -13,6 +13,7 @@ import AddMusic from './pages/AddMusic'
 import AddArtis from './pages/AddArtis'
 import Home from './pages/Home'
 import Auth from './pages/Auth'
+import ChatAdmin from './pages/ChatAdmin'
 
 const App = () => {
 
@@ -79,6 +80,7 @@ const App = () => {
       <Route exact path='/pay' element={<Transaction />} />
       <Route exact path='/pending' element={<PendingTransaction />} />
       <Route exact path='/admin' element={<AdminPage />} />
+      <Route exact path='/chat-admin' element={<ChatAdmin />} />
       <Route exact path='/add-music' element={<AddMusic />} />
       <Route exact path='/add-artis' element={<AddArtis />} />
 
