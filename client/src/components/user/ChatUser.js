@@ -35,7 +35,7 @@ export default function ChatUser({dataContact, clickContact, contact, messages, 
                 </>
             ) : (
                 <div className="d-flex flex-column h-1 overflow-auto text-center justify-content-center text-primary fw-600">
-                    No Message
+                    Click admin for start chat
                 </div>
             )
             }

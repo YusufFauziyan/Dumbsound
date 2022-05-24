@@ -61,15 +61,22 @@ export default function Transaction() {
     
     const handleBuy = async () => {
       try {
-  
+
+        const data = {
+          id:  userTrans?.id,
+          price: '30000',
+          status: userTrans?.status
+        }
         // Configuration
+        const body = JSON.stringify(data);
         const config = {
           method: "POST",
           headers: {
             Authorization: "Basic " + localStorage.token,
           },
+          body
         };
-  
+
         // Insert transaction data
         const response = await api.post("/transaction", config);
         console.log(response);
@@ -78,9 +85,9 @@ export default function Transaction() {
         // SNAP MIDTRANS
         window.snap.pay(token, {
           onSuccess: function (result) {
-            /* You may add your own implementation here */
-            console.log(result);
-            navigate("/pay");
+            /* You may add your own implementation here */  
+              console.log(result);
+              navigate("/");
           },
           onPending: function (result) {
             /* You may add your own implementation here */

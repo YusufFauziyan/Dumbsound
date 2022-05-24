@@ -27,7 +27,7 @@ exports.getUsers = async (req, res) => {
 
 
     } catch (error) {
-        console.log(errors)
+        console.log(error)
         res.status(500).send({
             status: 'failed',
             message: 'server error'
@@ -63,7 +63,7 @@ exports.getUser = async (req, res) => {
             dataUser
         })
     } catch (error) {
-        console.log(errors)
+        console.log(error)
         res.status(500).send({
             status: 'failed',
             message: 'server error'

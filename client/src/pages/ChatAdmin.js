@@ -152,12 +152,12 @@ export default function ChatAdmin() {
                     <div className="fixed-bottom position-relative">
                         <Form.Control type="email" placeholder="Chat user" className='border-none shadow py-2 px-3 borra-form overflow-auto' onKeyPress={onSendMessage}/>
                     </div>
-                </>
-                ) : (
-                    <div className='overflow-auto h-70 d-flex align-items-center justify-content-center'>
-                        No message
-                    </div>
-                )
+                    </>
+                    ) : (
+                        <div className='overflow-auto h-70 d-flex align-items-center justify-content-center'>
+                            No message
+                        </div>
+                    )
                 }
                 </div>
             </div>

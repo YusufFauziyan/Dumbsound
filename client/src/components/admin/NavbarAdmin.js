@@ -18,7 +18,7 @@ export default function NavbarAdmin() {
 
     return(
         <>
-            <nav  className="navbar px-lg-5 bg-dark shadow">
+            <nav  className="navbar px-5 bg-dark shadow">
                 <div className="container-fluid mt-3 d-flex">
                     <Link to='/admin' className='text-decoration-none d-flex align-items-center'>
                         <img src={Logo} alt="logo" />

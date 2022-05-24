@@ -19,7 +19,7 @@ export default function NavbarUser() {
 
     return(
         <>
-            <nav className="navbar mx-lg-5">
+            <nav className="navbar mx-5">
                 <div className="container-fluid mt-3 d-flex">
                     <Link to='/' className='text-decoration-none d-flex align-items-center'>
                         <img src={Logo} alt="logo" />

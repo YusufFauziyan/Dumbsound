@@ -29,7 +29,7 @@ const {
     addTransaction,
     getTransactions,
     getTransaction,
-    notification
+    notification,
 } = require ('../controllers/transaction')
 
 const {
@@ -65,6 +65,7 @@ router.get('/music/:id', getMusic)
 router.post('/register', register)
 router.post('/login', login)
 router.get('/check-auth', auth, checkAuth)
+
 
 // exports router
 module.exports = router

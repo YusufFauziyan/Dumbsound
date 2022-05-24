@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import { Alert } from "react-bootstrap";
 import { useMutation } from "react-query";
 
+import Register from './Register';
+
 // import usercontex & api
 import { UserContext } from "../context/userContext";
 import { API } from "../config/api";
@@ -94,6 +96,20 @@ export default function Login () {
         }
     });
 
+    // show password
+    const [icon, setIcon] = useState('bx bxs-low-vision')
+    const [type, setType] = useState('password')
+
+    const handlePassword = () => {
+        if (type==='password') {
+            setIcon('bx bxs-bullseye')
+            setType('text')
+        } else {
+            setIcon('bx bxs-low-vision')
+            setType('password')
+        }
+    }
+
     return(
         <>
             <form onSubmit={(e) => handleSubmit.mutate(e)} className="form-login bg-container px-4 py-4 text-white borra-4">
@@ -108,14 +124,15 @@ export default function Login () {
                     onChange={handleChange}
                     />
                 </div>
-                <div className="mb-3">
-                    <input type="password" 
+                <div className="mb-3 postion-relative">
+                    <input type={type} 
                     className="form-control p-2 bg-grey" 
                     placeholder='Password'    
                     value={password}
                     name="password"
                     onChange={handleChange}
-                />
+                    />
+                    <span onClick={handlePassword} className='text-dark icon-password'><i className={icon}></i></span>
                 </div>
                 <button type="submit" className="bg-orange w-100 my-3 text-white fw-500 py-2 borra-3">Login</button>
                 <p className='text-center fs-7'>Don't have an acount? klik <span className="fw-bold text-decoration-none text-white pointer">

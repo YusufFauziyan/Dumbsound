@@ -385,9 +385,9 @@ input[type='file'] {
 #chat .chat-container {
     width:330px !important;
     position: fixed !important;
-    bottom: 0 !important;
-    margin-bottom: -230px;
-    margin-left:50px !important;
+    bottom: 170px !important;
+    left: 40px;
+    display: inline !important;
 }
 
 /* scrollbar */
@@ -459,4 +459,11 @@ background: #555;
 }
 .z-index10 {
     z-index: 10 !important;
+}
+.icon-password {
+    position: absolute;
+    top: 167px;
+    right: 140px;
+    font-size: 23px;
+    cursor: pointer;
 }

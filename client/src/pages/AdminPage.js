@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
 
-import Duration from '../components/TimeDuration'
 import NavbarAdmin from '../components/admin/NavbarAdmin'
 import { API } from '../config/api'
 import { UserContext } from '../context/userContext'
@@ -9,7 +8,6 @@ export default function AdminPage () {
 
     let api = API()
     
-    const [state, dispatch] = useContext(UserContext)
     const [users, setUsers] = useState()
 
     const getUsers = async () => {
@@ -22,7 +20,7 @@ export default function AdminPage () {
         const response = await api.get('/users', config)
         setUsers(response.getData)
     }
-    console.log(users);
+
     useEffect(() => {
         getUsers()
     }, [])

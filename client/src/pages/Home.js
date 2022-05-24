@@ -214,6 +214,8 @@ export default function Home () {
                     }
                 </div>
                 
+            <br/>
+            </div>
                 <div className="w-100 p-fixed z-index10">
                     {/* Chat User */}
                     <Dropdown width="100" className="position-relative z-index10">
@@ -232,8 +234,6 @@ export default function Home () {
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>
-            <br/>
-            </div>
             {/* Playing Music Player */}
             {playMusic === "" ?
                 <div /> :
