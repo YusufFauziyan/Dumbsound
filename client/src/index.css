@@ -89,6 +89,10 @@ body {
 .fs-8 {
     font-size: 12px !important;
 }
+.fs-9 {
+    font-size: 9px !important;
+    font-weight: lighter !important;
+}
 .fs-0 {
     font-size: 48px;
 }
@@ -379,10 +383,10 @@ input[type='file'] {
 }
 
 #chat .chat-container {
-    width:max-content !important;
+    width:330px !important;
     position: fixed !important;
-    bottom: 0;
-    margin-bottom: 80px;
+    bottom: 0 !important;
+    margin-bottom: -230px;
     margin-left:50px !important;
 }
 
@@ -445,6 +449,9 @@ background: #555;
     cursor: pointer;
     right: 200px;
     bottom: 16px;
+}
+.contact-active {
+    background-color: #161616;
 }
 
 .z-index1 {
