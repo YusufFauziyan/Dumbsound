@@ -104,6 +104,21 @@ export default function Register () {
         }
       });
 
+      // show password
+      const [icon, setIcon] = useState('bx bxs-low-vision')
+      const [type, setType] = useState('password')
+  
+      const handlePassword = () => {
+          if (type==='password') {
+              setIcon('bx bxs-bullseye')
+              setType('text')
+          } else {
+              setIcon('bx bxs-low-vision')
+              setType('password')
+          }
+      }
+  
+
 
     return(
         <>
@@ -122,13 +137,14 @@ export default function Register () {
                     />
                 </div>
                 <div className="mb-3">
-                    <input type="password" 
+                    <input type={type}
                     className="form-control p-2 bg-grey" 
                     placeholder='Password'
                     value={password}
                     name="password"
                     onChange={handleChange}
-                />
+                    />
+                    <span onClick={handlePassword} className='text-dark icon-password-regist'><i className={icon}></i></span>
                 </div>
                 <div className="mb-3">
                     <input type="text" 
