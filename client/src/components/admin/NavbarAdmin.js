@@ -6,23 +6,21 @@ import Avatar from 'react-avatar'
 
 import DropAdmin from '../admin/DropAdmin'
 import { UserContext } from '../../context/userContext';
-import { API } from '../../config/api'
 
 // image
 import Logo from '../../assets/DumbSound.png'
-import Joji from '../../assets/Joji.jpg'
 
 export default function NavbarAdmin() {
 
-    const [state, dispatch] = useContext(UserContext)
+    const [state] = useContext(UserContext)
 
     return(
         <>
-            <nav  className="navbar px-5 bg-dark shadow">
-                <div className="container-fluid mt-3 d-flex">
+            <nav  className="navbar px-lg-3 bg-dark shadow">
+                <div className="container-fluid d-flex">
                     <Link to='/admin' className='text-decoration-none d-flex align-items-center'>
                         <img src={Logo} alt="logo" />
-                        <p className='text-orange my-auto fw-bold ms-2'>DUMB<span className='text-white'>SOUND</span></p> 
+                        <p className='text-orange my-auto fw-bold ms-2 nav-text'>DUMB<span className='text-white'>SOUND</span></p> 
                     </Link>
                     <div className="">
                     <Link to='/chat-admin' class='bx bx-message-rounded-detail text-white fs-1 position-absolute chat-icon text-decoration-none'></Link>
@@ -34,7 +32,7 @@ export default function NavbarAdmin() {
                                     size="45"
                                     textSizeRatio={2.5}
                                     round={true}
-                                    className="shadow me-5"
+                                    className="shadow"
                                 />
                             </Dropdown.Toggle>
 

@@ -104,11 +104,11 @@ export default function ChatAdmin() {
     return(
         <>
             <NavbarAdmin />
-            <div className="container-chat-admin text-white p-lg-5 h-70 gap-2 mt-5">
-                <div className='bg-grey2 flex-1 borra-3 ms-lg-5 overflow-md-auto '>
+            <div className="container-chat-admin text-white p-xl-5 h-70 gap-2 mt-5">
+                <div className='bg-grey2 flex-1 borra-3 ms-lg-5 overflow-md-auto chat-users'>
                 {/* contact user */}
                     <div className='d-flex border-btm'>
-                        <p className='m-auto fw-600 text-center fs-3 font-pt w-100 bg-grey3 borra-3 p-3'>Users</p>
+                        <p className='m-auto fw-600 text-center fs-md-3 font-pt w-100 bg-grey3 borra-3 p-3'>Users</p>
                     </div>
                     {contacts.length > 0 && (
                         <>

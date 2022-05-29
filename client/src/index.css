@@ -474,3 +474,394 @@ background: #555;
     font-size: 23px;
     cursor: pointer;
 }
+.img-card {
+    height: 180px !important;
+}
+
+
+/* media query */
+/* phone respnsive */
+@media only screen and (max-width: 576px) {
+    .auth-header {
+        font-size: 1.5rem !important;
+    }
+    .auth-desc {
+        font-size: .6rem !important;
+    }
+    .auth-card-header {
+        font-size: 1.2rem !important;
+    }
+    .nav-text {
+        font-size: .8rem !important;
+    }
+    .form-login {
+        width: 300px !important;
+        margin: auto;
+    }
+    .card {
+        width: 170px !important;
+    }
+    .img-card {
+        height: 150px !important;
+    }
+    #react-aria3101718402-4 {
+        padding-right: 0 !important;
+    }
+    .bx-message-rounded-detail {
+        right: 90px !important;
+        top: 19px !important;
+    }
+    .text-orange .col {
+        font-size: .7rem !important;
+        text-align: center !important;
+    }
+    .table-users .p-3 {
+        font-size: .5rem;
+        text-align: center !important;
+    }
+    .table-users-header,
+    .header-add-music,
+    .header-add-artis {
+        text-align: center !important;
+        font-size: 1.3rem !important;
+    }
+    .triangle-admin {
+        margin-left: 115px !important;
+    }
+    .thumbnail {
+        margin-top: 1rem !important;
+    }
+    .attache-input {
+        width: 100% !important;
+    }
+    .btn-add-music,
+    .btn-add-artis {
+        width: 50% !important;
+    }
+    .container-chat-admin {
+        display: flex !important;
+    }
+    .chat-users {
+        flex: 2 !important;
+    }
+    .avatar-img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .avatar-img span {
+        font-size: 1rem !important;
+    }
+    .dropdown-user .dropdown-menu {
+        margin-right: -60px;
+    }
+    .triangle {
+        margin-left: 55px;
+    }
+    .title-music {
+        font-size: .6rem !important;
+        margin-top: 8px;
+    }
+    .title-music span {
+        font-weight: 500;
+    }
+    .image-music {
+        width:45px !important;
+        height:45px !important;
+    }
+    .rhap_container {
+        flex-direction: row !important;
+    }
+    .rhap_controls-section {
+        left: 140px !important;
+        top: 35px !important;
+    }
+    .rhap_main {
+        position: unset !important;
+        margin-bottom: 40px !important;
+    }
+    .rhap_volume-controls {
+        margin-left: 0 !important;
+    }
+    .rhap_main-controls-button{
+        font-size: 30px !important;
+        margin: 0 !important;
+    }
+    .rhap_volume-button {
+        font-size: 23px !important;
+        margin-left: 10px;
+    }
+    .rhap_volume-bar-area{
+        width: 50%;
+    }
+    .rhap_volume-bar {
+        width: 75px !important;
+    }
+}
+
+/* tablet respnsive */
+@media only screen and (min-width: 577px) {
+    /* auth */
+    .auth-header {
+        font-size: 2rem !important;
+    }
+    .auth-desc {
+        font-size: .8rem !important;
+    }
+    .auth-card-header {
+        font-size: 1.2rem !important;
+    }
+    .nav-text {
+        font-size: .8rem !important;
+    }
+    .form-login {
+        width: 400px !important;
+        margin: auto;
+    }
+    .card {
+        width: 170px !important;
+    }
+    .img-card {
+        height: 150px !important;
+    }
+    #react-aria3101718402-4 {
+        padding-right: 0 !important;
+    }
+
+    /* navbar admin & table users*/
+    .bx-message-rounded-detail {
+        right: 90px !important;
+        top: 19px !important;
+    }
+    .text-orange .col {
+        font-size: .8rem !important;
+        text-align: center !important;
+    }
+    .table-users .p-3 {
+        font-size: .7rem;
+        text-align: center !important;
+    }
+    .table-users-header,
+    .header-add-music,
+    .header-add-artis {
+        text-align: center !important;
+        font-size: 1.3rem !important;
+    }
+    .triangle-admin {
+        margin-left: 115px !important;
+    }
+
+    /* chat admin */
+    .container-chat-admin {
+        display: flex !important;
+        margin: 0 10px;
+    }
+    .chat-users {
+        flex: 2 !important;
+    }
+
+    /* home user */
+    .avatar-img {
+        width: 45px !important;
+        height: 45px !important;
+    }
+    .avatar-img span {
+        font-size: 1rem !important;
+    }
+    .dropdown-user .dropdown-menu {
+        margin-right: -60px;
+    }
+    .triangle {
+        margin-left: 55px;
+    }
+
+    /* music player */
+    .title-music {
+        font-size: .6rem !important;
+        margin-top: 8px;
+    }
+    .title-music span {
+        font-weight: 500;
+    }
+    .image-music {
+        width:45px !important;
+        height:45px !important;
+    }
+    .rhap_container {
+        flex-direction: row !important;
+    }
+    .rhap_controls-section {
+        left: 260px !important;
+        top: 35px !important;
+    }
+    .rhap_main {
+        position: unset !important;
+        margin-bottom: 40px !important;
+    }
+    .rhap_volume-controls {
+        margin-left: 0 !important;
+    }
+    .rhap_main-controls-button{
+        font-size: 35px !important;
+    }
+    .rhap_volume-button {
+        font-size: 25px !important;
+        margin-left: 20px;
+    }
+    .rhap_volume-bar-area{
+        width: 100%;
+    }
+    .rhap_volume-bar {
+        width: 100px !important;
+    }
+    .rhap_main-controls {
+        align-items: flex-start !important;
+    }
+}
+
+/* responsive tablet ++ */
+@media only screen and (min-width: 768px) {
+    /* auth */
+    .auth-header {
+        font-size: 2.5rem !important;
+    }
+    .auth-desc {
+        font-size: .8rem !important;
+    }
+    .auth-card-header {
+        font-size: 1.5rem !important;
+    }
+    .nav-text {
+        font-size: .8rem !important;
+    }
+    .form-login {
+        width: 400px !important;
+        margin: auto;
+    }
+    .card {
+        width: 170px !important;
+    }
+    .img-card {
+        height: 150px !important;
+    }
+    #react-aria3101718402-4 {
+        padding-right: 0 !important;
+    }
+
+    /* navbar admin & table users*/
+    .bx-message-rounded-detail {
+        right: 90px !important;
+        top: 19px !important;
+    }
+    .text-orange .col {
+        font-size: 1rem !important;
+        text-align: center !important;
+    }
+    .table-users .p-3 {
+        font-size: .8rem;
+        text-align: center !important;
+    }
+    .table-users-header,
+    .header-add-music,
+    .header-add-artis {
+        text-align: center !important;
+        font-size: 1.3rem !important;
+    }
+    .triangle-admin {
+        margin-left: 115px !important;
+    }
+
+    /* home user */
+    .avatar-img {
+        width: 45px !important;
+        height: 45px !important;
+    }
+    .avatar-img span {
+        font-size: 1rem !important;
+    }
+    .dropdown-user .dropdown-menu {
+        margin-right: -60px;
+    }
+    .triangle {
+        margin-left: 55px;
+    }
+
+    /* music player */
+    .title-music {
+        font-size: .8rem !important;
+        margin-top: 6px;
+    }
+    .title-music span {
+        font-weight: 500;
+    }
+    .image-music {
+        width:50px !important;
+        height:50px !important;
+    }
+    .rhap_container {
+        flex-direction: row !important;
+    }
+    .rhap_controls-section {
+        left: 0 !important;
+        top: 24px !important;
+        left: 30% !important;
+    }
+    .rhap_main {
+        position: relative !important;
+        margin-bottom: 40px !important;
+    }
+    .rhap_volume-controls {
+        margin-left: 0 !important;
+    }
+    .rhap_main-controls-button{
+        font-size: 35px !important;
+    }
+    .rhap_volume-button {
+        font-size: 25px !important;
+        margin-left: 20px;
+    }
+    .rhap_volume-bar-area{
+        width: 100%;
+    }
+    .rhap_volume-bar {
+        width: 100px !important;
+    }
+    .rhap_main-controls {
+        align-items: flex-start !important;
+    }
+}
+
+/* responsive 992 */
+@media only screen and (min-width: 992px) {
+    /* navbar admin & table users*/
+    .bx-message-rounded-detail {
+        right: 110px !important;
+        top: 15px !important;
+    }
+
+    /* home user */
+    .triangle {
+        margin-left: 25px;
+    }
+}
+
+/* responsive 1200 */
+@media only screen and (min-width: 1200px) {
+    /* navbar admin & table users*/
+    .text-orange .col {
+        font-size: 1.3rem !important;
+        text-align: center !important;
+    }
+    .table-users .p-3 {
+        font-size: 1rem;
+        text-align: center !important;
+    }
+    .table-users-header,
+    .header-add-music,
+    .header-add-artis {
+        text-align: center !important;
+        font-size: 1.3rem !important;
+    }
+    .triangle-admin {
+        margin-left: 115px !important;
+    }
+}

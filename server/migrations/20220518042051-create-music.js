@@ -18,7 +18,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       idArtis: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'artis',
+          key: 'id'
+        },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE"
       },
       attache: {
         type: Sequelize.STRING

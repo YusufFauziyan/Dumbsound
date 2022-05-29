@@ -113,11 +113,11 @@ export default function AddMusic () {
                 {message}
                 <form onSubmit={(e) => {
                     e.preventDefault()
-                     handleSubmit()}} className='mt-5 p-10'>
-                    <h2 className='my-4 fs-sans'>Add Music</h2>
+                     handleSubmit()}} className='mt-5 px-lg-5 px-3'>
+                    <h2 className='my-4 fs-sans header-add-music'>Add Music</h2>
                     <div className="row gap-2">
 
-                        <input type="text" className="p-2 bg-grey col-8 border-none borra-2" placeholder='Title' value={title} name='title' onChange={handleChange}/>
+                        <input type="text" className="p-2 bg-grey col-sm-8 border-none borra-2" placeholder='Title' value={title} name='title' onChange={handleChange}/>
                         
                         <div class=" col fs-7 thumbnail">
                             <input class="form-file" id='thumbnail' type='file' onChange={handleChange} name="thumbnail" accept="image/*" hidden/>
@@ -137,13 +137,13 @@ export default function AddMusic () {
 
                         <div className='attache'>
                             <input id='attache' type="file" class="form-ile" name='attache' onChange={handleChange} hidden/>
-                            <label for="attache"  class="w-20 mb-3 input-group-text text-grey" accept="audio/*">Attache</label>
+                            <label for="attache"  class="w-20 mb-3 input-group-text text-grey attache-input" accept="audio/*">Attache</label>
                         </div>
 
                     </div>
 
                     <div className='d-flex justify-content-center my-3'>
-                        <button type="submit" className="bg-yellow w-30 text-white fw-500 py-2 borra-3">Submit</button>
+                        <button type="submit" className="bg-yellow w-30 text-white fw-500 py-2 borra-3 btn-add-music">Submit</button>
                     </div>
                     
                 </form>

@@ -30,8 +30,8 @@ export default function AdminPage () {
         <>
             <div className="admin-container text-white">
                 <NavbarAdmin />
-                <div className='d-flex flex-column height-90 mt-5 p-10'>
-                    <h2 className='my-4 fs-sans'>Incoming Transaction</h2>
+                <div className='d-flex flex-column height-90 mt-md-5 p-10 px-3 px-xl-4 list-users'>
+                    <h2 className='my-4 fs-sans table-users-header'>Incoming Transaction</h2>
                     <table class="table table-dark table-striped fs-6">
                         <thead className="text-orange">
                             <tr>
@@ -44,7 +44,7 @@ export default function AdminPage () {
                         </thead>
                         <tbody>
                         {users?.map((user, index) => (
-                            <tr>
+                            <tr className='table-users'>
                                 <th scope="row" className='p-3'>{index + 1}</th>
                                 <td className='p-3'>{user.fullName}</td>
                                 <td className='p-3 text-green'> PR

@@ -30,6 +30,7 @@ const {
     getTransactions,
     getTransaction,
     notification,
+    updateTransaction
 } = require ('../controllers/transaction')
 
 const {
@@ -47,6 +48,7 @@ router.get('/user/:id', getUser)
 router.post('/transaction',auth, addTransaction)
 router.get('/transactions', getTransactions)
 router.get('/transaction/:id', getTransaction)
+router.patch('/transaction/:id', updateTransaction)
 
 router.post('/notification', notification)
 

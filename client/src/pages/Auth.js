@@ -36,21 +36,21 @@ export default function Auth () {
             <Navbar />
                 <div className=''/>
                 <div className='d-flex flex-column justify-content-center text-white align-items-center flex-1 text-center'>
-                    <h1 className='mb-3 fs-0'>Connect on DumbSound</h1>
-                    <p className='fs-5 fw-small'>Discovery, Stream, and share a constantly expanding mix of music <br />from emerging and major artists around the world</p>
+                    <h1 className='mb-sm-3 fs-0 auth-header'>Connect on DumbSound</h1>
+                    <p className='fs-sm-5 fw-small auth-desc'>Discovery, Stream, and share a constantly expanding mix of music <br />from emerging and major artists around the world</p>
                 </div>
             </div>
 
-            <h3 className='text-orange text-center mt-5'>Dengarkan Dan Rasakan</h3>
+            <h3 className='text-orange text-center my-4 auth-card-header'>Dengarkan Dan Rasakan</h3>
 
-            <div className="mx-5 borra-4 d-flex gap-4 justify-content-justify flex-1 flex-wrap">
+            <div className="mx-sm-5 mx-3 borra-4 d-flex gap-3 justify-content-justify flex-1 flex-wrap">
                 {/* card */}
                 {music? 
                     music.map((item) => {
                         return(
-                            <div className="home-card d-flex mt-5 text-decoration-none">
+                            <div className="home-card d-flex mt-2 text-decoration-none">
                                 <div className='card p-2 bg-grey2'>
-                                        <img src={path + item.thumbnail} alt="thumbnail" height={180} className="object-fit"/>
+                                        <img src={path + item.thumbnail} alt="thumbnail" className="object-fit img-card"/>
                                         <div className='text-white p-2 py-3'>
                                             <div className="d-flex text-white justify-content-between">
                                                 <p className='fw-600 mb-3px'>{(item.title.length > 8) ? item.title.slice(0, 8) + '...' : item.title}</p>

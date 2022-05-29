@@ -38,15 +38,15 @@ export default function Navbar () {
     const [modalShowLogin, setModalShowLogin] = React.useState(false);
     return(
         <>
-            <nav class="navbar mx-5">
+            <nav class="navbar mx-md-5">
                 <div class="container-fluid mt-3">
                     <a href='#' className='text-decoration-none d-flex align-items-center'>
-                        <img src={Logo} alt="logo" />
-                        <p className='text-orange my-auto fw-bold ms-2'>DUMB<span className='text-white'>SOUND</span></p> 
+                        <img src={Logo} alt="logo" className="logo-img" />
+                        <p className='text-orange my-auto fw-bold ms-2 nav-text'>DUMB<span className='text-white'>SOUND</span></p> 
                     </a>
                     <div class="d-flex">
-                        <button type="button" class="btn btn-outline-light px-5 borra-3 fs-8" onClick={() => setModalShowLogin(true)}>Login</button>
-                        <button type="button" class="borra-3 text-white bg-orange px-5 ms-2 border-none fs-8" onClick={() => setModalShow(true)}>Register</button>
+                        <button type="button" class="btn btn-outline-light px-sm-5 px-3 borra-3 fs-8" onClick={() => setModalShowLogin(true)}>Login</button>
+                        <button type="button" class="borra-3 text-white bg-orange px-sm-5 px-3 ms-2 border-none fs-8" onClick={() => setModalShow(true)}>Register</button>
                         
                         <RegisterShow
                             show={modalShow}

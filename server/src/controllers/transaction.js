@@ -10,8 +10,7 @@ const {
 //add transaction
 exports.addTransaction = async (req, res) => {
     try {
-        const data = req.body
-
+        let data = req.body
 
         const newData = await transaction.create({
             ...data,
@@ -36,7 +35,7 @@ exports.addTransaction = async (req, res) => {
     
         let parameter = {
             transaction_details: {
-                order_id: parseInt(newData.id + Math.random().toString().slice(3, 8)),
+                order_id: parseInt(Math.random().toString().slice(3, 8)),
                 gross_amount: newData.price,
             },
             credit_card: {
@@ -156,6 +155,34 @@ const handleTransaction = async (status, transactionId) => {
         }
     );
 };
+
+exports.updateTransaction = async (req, res) => {
+    try {
+        const {id} = req.params
+        const data = req.body
+
+        const response = await transaction.update(req.body, {
+            where: {
+                id,
+            }
+        })
+
+        res.status(200).send({
+            status: "success",
+            message: `Update user id: ${id} finished`,
+            data : {
+                id, data
+            }
+        })
+    } catch (error) {
+        console.log(error);
+        res.send({
+            status: "failed",
+            message: "Server Error",
+        });
+    }
+    
+}
   
 
   

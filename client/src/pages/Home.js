@@ -152,23 +152,23 @@ export default function Home () {
                 <NavbarUser />
                     <div className=''/>
                     <div className='d-flex flex-column justify-content-center text-white align-items-center flex-1 text-center'>
-                        <h1 className='mb-3 fs-0'>Connect on DumbSound</h1>
-                        <p className='fs-5 fw-small'>Discovery, Stream, and share a constantly expanding mix of music <br />from emerging and major artists around the world</p>
+                        <h1 className='mb-md-3 fs-0 auth-header'>Connect on DumbSound</h1>
+                        <p className='fs-md-5 fw-small auth-desc'>Discovery, Stream, and share a constantly expanding mix of music <br />from emerging and major artists around the world</p>
                     </div>
                 </div>
 
-                <h3 className='text-orange text-center mt-5'>Dengarkan Dan Rasakan</h3>
+                <h3 className='text-orange text-center mt-md-5 my-4 auth-card-header'>Dengarkan Dan Rasakan</h3>
 
-                <div className="mx-5 borra-4 d-flex gap-4 justify-content-justify flex-1 flex-wrap mb-6">
+                <div className="mx-sm-5 mx-3 borra-4 d-flex gap-3 justify-content-justify flex-1 flex-wrap mb-6">
                     {/* card */}
                     {userTrans === null || userTrans?.status === "pending" ?
                         <>
                             {music? 
                                 music.map((item) => {
                                     return(
-                                        <Link to={'/pay'} className="home-card d-flex mt-5 text-decoration-none">
+                                        <Link to={'/pay'} className="home-card d-flex mt-2 text-decoration-none">
                                             <div className='card p-2 bg-grey2'>
-                                                    <img src={path + item.thumbnail} alt="thumbnail" height={180} className="object-fit"/>
+                                                    <img src={path + item.thumbnail} alt="thumbnail" height={180} className="object-fit img-card"/>
                                                     <div className='text-white p-2 py-3'>
                                                         <div className="d-flex text-white justify-content-between">
                                                             <p className='fw-600 mb-3px'>{(item.title.length > 8) ? item.title.slice(0, 8) + '...' : item.title}</p>
@@ -191,9 +191,9 @@ export default function Home () {
                                 {music? 
                                     music.map((item) => {
                                         return(
-                                            <div className="home-card d-flex mt-5 text-decoration-none">
-                                                <div className='card p-2 bg-grey2' onClick={() => setPlayMusic(item)}>
-                                                    <img src={path + item.thumbnail} alt="thumbnail" height={180} className="pointer object-fit"/>
+                                            <div className="home-card d-flex mt-2 text-decoration-none">
+                                                <div className='card p-2 bg-grey2 ' onClick={() => setPlayMusic(item)}>
+                                                    <img src={path + item.thumbnail} alt="thumbnail" height={180} className="pointer object-fit img-card"/>
                                                     <div className='text-white p-2 py-3'>
                                                         <div className="d-flex text-white justify-content-between">
                                                             <p className='fw-600 mb-3px'>{(item.title.length > 8) ? item.title.slice(0, 8) + '...' : item.title}</p>

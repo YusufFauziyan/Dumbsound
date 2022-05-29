@@ -11,9 +11,9 @@ export default function MusicPlayer({playMusic}) {
     return (
         <div>
             <Navbar className="fixed-bottom navplay d-flex">
-                <div className="d-flex w-50 justify-content-center">
+                <div className="d-flex w-50 justify-content-center ms-2">
                     <img src={path + playMusic.thumbnail} alt="artis" className="image-music rounded-circle object-fit" width={50} height={50}/>
-                    <p className="text-white ms-3 mb-0">{playMusic.title} <br/> <span className='fs-8'>{playMusic.artis.name}</span> </p>
+                    <p className="text-white ms-sm-3 ms-1 mb-0 title-music">{(playMusic.title.length > 8) ? playMusic.title.slice(0, 8) + '...' : playMusic.title} <br/> <span className='fs-8'>{playMusic.artis.name}</span> </p>
                 </div>
                 <AudioPlayer
                     src={path + playMusic.attache}

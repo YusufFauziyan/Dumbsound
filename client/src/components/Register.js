@@ -1,6 +1,6 @@
 // import components
 import React, { useState, useContext } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Alert, Spinner } from "react-bootstrap";
 import { useMutation } from "react-query";
 
@@ -102,27 +102,25 @@ export default function Register () {
           setMessage(alert);
           console.log(error);
         }
-      });
+    });
 
-      // show password
-      const [icon, setIcon] = useState('bx bxs-low-vision')
-      const [type, setType] = useState('password')
+    // show password
+    const [icon, setIcon] = useState('bx bxs-low-vision')
+    const [type, setType] = useState('password')
+
+    const handlePassword = () => {
+        if (type==='password') {
+            setIcon('bx bxs-bullseye')
+            setType('text')
+        } else {
+            setIcon('bx bxs-low-vision')
+            setType('password')
+        }
+    }
   
-      const handlePassword = () => {
-          if (type==='password') {
-              setIcon('bx bxs-bullseye')
-              setType('text')
-          } else {
-              setIcon('bx bxs-low-vision')
-              setType('password')
-          }
-      }
-  
-
-
     return(
         <>
-            <form onSubmit={(e) => handleSubmit.mutate(e)} className="form-login bg-container px-4 py-4 text-white borra-4">
+            <form onSubmit={(e) => handleSubmit.mutate(e)} className="form-login bg-container px-4 py-sm-4 text-white borra-4">
                 <div className="mb-3">
                     {message}
                     <label for="exampleInputEmail1" className="form-label my-4 fs-2 fw-800 ls-3">Register</label>

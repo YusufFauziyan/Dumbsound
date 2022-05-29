@@ -112,10 +112,10 @@ export default function Login () {
 
     return(
         <>
-            <form onSubmit={(e) => handleSubmit.mutate(e)} className="form-login bg-container px-4 py-4 text-white borra-4">
+            <form onSubmit={(e) => handleSubmit.mutate(e)} className="form-login bg-container px-4 py-sm-4 text-white borra-4">
                 <div className="mb-3">
                 {message}
-                    <label for="exampleInputEmail1" className="form-label my-3 fs-2 fw-800 ls-3">Login</label>
+                    <label for="exampleInputEmail1" className="form-label my-3 fs-sm-2 fw-800 ls-sm-3 fs-4">Login</label>
                     <input type="email" 
                     className="form-control p-2 bg-grey" 
                     placeholder='Email'

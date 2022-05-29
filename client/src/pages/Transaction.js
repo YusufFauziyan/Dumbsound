@@ -17,6 +17,7 @@ export default function Transaction() {
 
     const [state, dispatch] = useContext(UserContext)
     const [userTrans, setUserTrans] = useState()
+    const [isLoading, setIsloading] = useState(false)
 
     // find user transaction
     const getTransaction = async () => {
@@ -60,12 +61,11 @@ export default function Transaction() {
     }, []);
     
     const handleBuy = async () => {
+      setIsloading(true)
       try {
 
         const data = {
-          id:  userTrans?.id,
           price: '30000',
-          status: userTrans?.status
         }
         // Configuration
         const body = JSON.stringify(data);
@@ -76,18 +76,17 @@ export default function Transaction() {
           },
           body
         };
-
         // Insert transaction data
         const response = await api.post("/transaction", config);
         console.log(response);
         const token = response.payment.token;
-
+        console.log(state);
         // SNAP MIDTRANS
         window.snap.pay(token, {
           onSuccess: function (result) {
-            /* You may add your own implementation here */  
-              console.log(result);
-              navigate("/");
+            /* You may add your own implementation here */
+            console.log(result)
+            navigate("/pay");
           },
           onPending: function (result) {
             /* You may add your own implementation here */
@@ -143,7 +142,6 @@ export default function Transaction() {
                   <h1 className='my-5 fw-700 fs-1 text-orange'>Pending</h1>
                   <p className='lh-lg mb-4'>Your transaction is pending <br/> <span className='fs-8'>Please wait a moments</span> <br/><span className='text-orange fw-bold'>DUMB</span><b>SOUND: 098131222232</b></p>
                   <button type="submit" className="btn btn-outline-light text-orange px-5 py-2 fw-500 py-2 borra-3" onClick={handleBuy}>Try payment</button>
-                  {/* <button type="submit" className="bg-orange px-5 py-3 text-white fw-500 py-2 borra-3" onClick={handleBuy}>Bayar Sekarang</button> */}
                 </div>
             </div>
         }

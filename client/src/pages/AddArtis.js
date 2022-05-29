@@ -83,9 +83,9 @@ export default function AddArtis () {
         <>
             <div className="admin-container text-white">
                 <NavbarAdmin className='text-center'/>
-                <form onSubmit={(e) => handleSubmit.mutate(e)} className='mt-5 p-10'>
+                <form onSubmit={(e) => handleSubmit.mutate(e)} className='mt-5 px-lg-5 px-3'>
                 {message}
-                    <h2 className='my-4 fs-sans'>Add Artis</h2>
+                    <h2 className='my-4 fs-sans header-add-artis'>Add Artis</h2>
                     <div className="row gap-2">
                         <input type="text" className="p-2 bg-grey border-none borra-2" placeholder='Name' value={name} name='name' onChange={handleChange} required/>
 
@@ -101,7 +101,7 @@ export default function AddArtis () {
                     </div>
 
                     <div className='d-flex justify-content-center my-3'>
-                        <button type="submit" className="bg-yellow w-30 text-white fw-500 py-2 borra-3">Add Artis</button>
+                        <button type="submit" className="bg-yellow w-30 text-white fw-500 py-2 borra-3 btn-add-artis">Add Artis</button>
                     </div>
                     
                 </form>
