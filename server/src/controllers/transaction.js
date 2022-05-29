@@ -14,7 +14,7 @@ exports.addTransaction = async (req, res) => {
 
         const newData = await transaction.create({
             ...data,
-            status: "pending",
+            status: "success",
             price: "30000",
             userId: req.user.id,
         });
